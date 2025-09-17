@@ -1,5 +1,5 @@
 import React from "react";
-import Form from "react-bootstrap/form";
+import Form from "react-bootstrap";
 import "./ContactUs.css";
 import { useState } from "react";
 import { toast } from "react-toastify";
