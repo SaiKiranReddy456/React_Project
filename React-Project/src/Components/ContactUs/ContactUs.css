@@ -1,0 +1,130 @@
+#one{
+    text-align: center;
+    padding:2%;
+    background-color: #28328C;
+    color:white;
+}
+#two{
+    display: flex;
+    margin:5%;
+    justify-content: center;
+    gap:30px;
+    /* flex-basis: 50%; */
+}
+#two-b{
+    flex-basis: 30%;
+    background-color: #F0F0F5;
+    padding:2%;
+    height:80vh;
+}
+#two-a{
+    flex-basis: 40%;
+}
+#two-a>button{
+    background: none;
+    border-radius: 5px;
+    padding:1%;
+    border-style: none;
+    background-color:#14BEF0;
+    color: white;
+}
+#two-c{
+    display: flex;
+    margin:5% 0%;
+    justify-content: center;
+    background-color: white;
+    padding: 1%;
+}
+#two-d{
+    width:100%;
+    color:#14BEF0;
+}
+#two-d:hover{
+    cursor: pointer;
+    text-decoration: solid;
+}
+@media (max-width:768px){
+    #two-c{
+        flex-direction: column;
+        margin:2% 0% !important;
+        /* gap:50px; */
+    }
+    
+}
+@media (max-width:576px){
+    #two-b>h3,p{
+        text-align: center;
+    }
+    #two-c>div>h5{
+        text-align: center !important;
+    }
+    #two-a{
+        text-align: center;
+    }
+    #two-c{
+        flex-direction: column;
+        margin:2% 0% !important;
+    }
+}
+
+.three {
+  background-color: #0a3d62;
+  color: #fff;
+  padding: 40px 20px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.three-a {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.three-b {
+  flex: 1 1 180px;
+  margin: 15px;
+}
+
+.three-b h4 {
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  border-bottom: 2px solid #334950;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.three-b ul {
+  list-style: none;
+  padding: 0;
+}
+
+.three-b ul li {
+  margin-bottom: 8px;
+}
+
+.three-b ul li a {
+  text-decoration: none;
+  color: #dcdcdc;
+  transition: 0.3s;
+}
+
+.three-b ul li a:hover {
+  color: #14bef0;
+}
+
+.three-c {
+  text-align: center;
+  padding: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+
+
+
+
+
