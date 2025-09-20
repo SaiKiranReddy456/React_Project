@@ -5,11 +5,26 @@ import "./Home.css";
 import { FaRegUser } from "react-icons/fa";
 import { FaGooglePlay } from "react-icons/fa";
 import { FaAppStoreIos } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
 
 
 
 
 const Home = () => {
+  const navigate = useNavigate();
+
+  const handleClick=()=>{
+    navigate("/login");
+  };
+  
+  const handleDownload=()=>{
+    window.open("https://play.google.com/store/apps?hl=en_IN&pli=1")
+  }
+
+  const handleDownloadd=()=>{
+    window.open("https://www.apple.com/in/app-store/")
+  }
+
   console.log(healthData);
   return (
     <div>
@@ -34,7 +49,7 @@ const Home = () => {
       <div id="second">
         <div id="second-a">
           <h3>Consult top doctors online for any health concern</h3>
-          <button>View All Specialities</button>
+          <button onClick={handleClick}>View All Specialities</button>
         </div>
         <div className="second-b">
           {healthData[1].health.map((x, i) => (
@@ -46,7 +61,7 @@ const Home = () => {
                 style={{ width: "50%" }}
               />
               <h5>{x.title}</h5>
-              <button className="consult-btn">CONSULT NOW</button>
+              <button className="consult-btn" onClick={handleClick}>CONSULT NOW</button>
             </div>
           ))}
         </div>
@@ -84,7 +99,7 @@ const Home = () => {
             Health articles that keep you informed about good health practices
             and achieve your goals.
           </div><br></br>
-          <button>See all articles</button>
+          <button onClick={handleClick}>See all articles</button>
         </div>
 
         <div className="fourth-b">
@@ -119,11 +134,11 @@ const Home = () => {
           <p>Access consultation with India’s top doctors on the HealthBridge app. Connect with doctors online, available 24/7, from the comfort of your home.</p>
           {/* <h4>Get the link to download the app</h4> */}
           <div id="sixth-b">
-             <div id="sixth-c">
+             <div id="sixth-c" onClick={handleDownload}>
               <FaGooglePlay style={{fontSize:"xx-large"}}/>
               <h4>Google Play</h4>
              </div>
-             <div id="sixth-d">
+             <div id="sixth-d" onClick={handleDownloadd}>
               <FaAppStoreIos style={{fontSize:"xx-large"}}/>
               <h4>App Store</h4>
              </div>
@@ -138,7 +153,7 @@ const Home = () => {
           aria-describedby="inputGroup-sizing-sm"
         />
       </InputGroup>
-      <button>Send SMS</button>
+      <button onClick={handleClick}>Send SMS</button>
           </div>
         </div>
       </div>

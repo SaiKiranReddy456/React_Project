@@ -3,9 +3,17 @@ import "./AboutUs.css";
 import { Card, Button } from "react-bootstrap";
 import healthData from "../Data/Data";
 import "aos/dist/aos.css";
+import { useNavigate } from "react-router-dom";
 
 
 const AboutUs = () => {
+
+  const navigate=useNavigate();
+
+  const handleClick=()=>{
+    navigate("/login");
+  };
+
   return (
     <div>
       <div id="a">
@@ -120,7 +128,7 @@ const AboutUs = () => {
                 <Card.Img variant="top" src={x.image} />
                 <Card.Body>
                   <Card.Title>{x.title}</Card.Title>
-                  <Button variant="primary">Read Full Story</Button>
+                  <Button variant="primary" onClick={handleClick}>Read Full Story</Button>
                 </Card.Body>
               </Card>
             );
@@ -162,7 +170,7 @@ const AboutUs = () => {
       <div id="f" data-aos="zoom-out-up">
         <div id="f1">
           <h1>Data privacy and security is our top priority</h1>
-          <p>Data privacy and security has always served as one of the founding philosophies of Practo, and we go to great lengths to safeguard the confidentiality and integrity of our users. <button>Read more here</button></p>
+          <p>Data privacy and security has always served as one of the founding philosophies of Practo, and we go to great lengths to safeguard the confidentiality and integrity of our users. <button onClick={handleClick}>Read more here</button></p>
         </div>
         <div id="f2">
           <img src="https://www.practo.com/providers/static/images/pages/company/about/security.png" style={{width:"100%"}}></img>
