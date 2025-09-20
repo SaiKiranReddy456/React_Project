@@ -93,7 +93,7 @@ const UserProfile = () => {
           <Button
             variant="outline-success"
             onClick={() => setShowModal(true)}
-            style={{ width: "15%", margin: "auto" }}
+            style={{ width: "100%", margin: "auto" }}
           >
             Edit Profile
           </Button>
