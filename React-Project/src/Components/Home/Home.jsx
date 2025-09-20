@@ -13,7 +13,7 @@ const Home = () => {
   console.log(healthData);
   return (
     <div>
-      <div id="first">
+      <div id="first" data-aos="flip-down">
         {healthData[0].services.map((x) => {
           return (
             <Card style={{ width: "18rem" }}>

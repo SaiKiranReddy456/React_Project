@@ -6,6 +6,7 @@ import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import myImage from "./img1.jpeg"
 
 const Signup = () => {
   const [signupDetails, setSignpDetails] = useState({
@@ -44,7 +45,7 @@ const Signup = () => {
   return (
     <div id="main">
       <div className="branding">
-        <img src="img1.jpeg" alt="HealthBridge Logo" />
+        <img src={myImage} alt="HealthBridge Logo" />
         <h2>HealthBridge</h2>
         <h3>Connecting You to Better Care, Instantly.</h3>
       </div>

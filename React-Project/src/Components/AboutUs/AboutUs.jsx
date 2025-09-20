@@ -2,6 +2,8 @@ import React from "react";
 import "./AboutUs.css";
 import { Card, Button } from "react-bootstrap";
 import healthData from "../Data/Data";
+import "aos/dist/aos.css";
+
 
 const AboutUs = () => {
   return (
@@ -17,7 +19,7 @@ const AboutUs = () => {
         </p>
       </div>
 
-      <div id="b">
+      <div id="b" data-aos="fade-down">
         <div id="b1">
           <h3>Health is a habit</h3>
           <p>
@@ -36,7 +38,9 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <div id="c">
+      <div id="c" data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
         <h2>Our Offerings</h2>
         <br></br>
         <div id="c1">
@@ -102,7 +106,9 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <div id="d">
+      <div id="d" data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000">
         <h1 id="d1">
           Each time a patient finds the right doctor, we build a healthier
           nation
@@ -122,7 +128,9 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <div id="e">
+      <div id="e" data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
         <h1>Our approach to healthcare</h1>
         <h4>
           Providing high-quality, trusted, and accessible healthcare is our
@@ -151,7 +159,7 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <div id="f">
+      <div id="f" data-aos="zoom-out-up">
         <div id="f1">
           <h1>Data privacy and security is our top priority</h1>
           <p>Data privacy and security has always served as one of the founding philosophies of Practo, and we go to great lengths to safeguard the confidentiality and integrity of our users. <button>Read more here</button></p>
@@ -164,12 +172,12 @@ const AboutUs = () => {
       <div id="g">
         <h1 style={{textAlign:"center",margin:"2%"}}>Our investors share our vision</h1>
         <div id="g1">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ4rF9YWtARaTd5Awt-_Nf3aLFqSXcKAretw&s"></img>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTMPCNaUj-W_l2QLHmYYg7IgSaE2nW9F7BhA&s"></img>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRosP7D6rD0iJJ30wNQY1v9uBW4Kk2fLUqdpQ&s"></img>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2TjblN4GF_3dnIDxYXmnYP1Fq2EM4K3CtuQ&s"></img>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOHqi2OFGuW2xRg321iUaGYyqHOZMZxlh9Dg&s"></img>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1g14QYtlfSIderodN6Dz1vz4KNb7C3B6BCw&s"></img>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ4rF9YWtARaTd5Awt-_Nf3aLFqSXcKAretw&s" style={{width:"100%"}}></img>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTMPCNaUj-W_l2QLHmYYg7IgSaE2nW9F7BhA&s" style={{width:"100%"}}></img>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRosP7D6rD0iJJ30wNQY1v9uBW4Kk2fLUqdpQ&s" style={{width:"100%"}}></img>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2TjblN4GF_3dnIDxYXmnYP1Fq2EM4K3CtuQ&s" style={{width:"100%"}}></img>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOHqi2OFGuW2xRg321iUaGYyqHOZMZxlh9Dg&s" style={{width:"100%"}}></img>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1g14QYtlfSIderodN6Dz1vz4KNb7C3B6BCw&s" style={{width:"100%"}}></img>
         </div>
         <p style={{margin:"5%",textAlign:"center"}}>"HealthBridge is revolutionizing healthcare by enabling consumers to find the best doctors, book instant appointments, consultations, and make better, more informed health decisions. It is our privilege to scale and bring HealthBridge to billions of consumers around the globe."</p>
       </div>

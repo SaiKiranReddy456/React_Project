@@ -154,7 +154,10 @@ const Appointments = () => {
         <br></br>
 
         <div id="appointment">
-          {appointments.map((appt) => (
+          {appointments.length == 0 ? (
+            <p style={{ textAlign: "center" }}>No appointments found.</p>
+          ) : (
+          appointments.map((appt) => (
             <div
               id="apptcard"
               className="animate__animated animate__jackInTheBox"
@@ -184,7 +187,7 @@ const Appointments = () => {
                         ? "green"
                         : appt.status === "Declined"
                         ? "red"
-                        : "yellow",
+                        : "orange",
                   }}
                   className="animate__animated animate__heartBeat animate__delay-1s"
                 >
@@ -200,11 +203,11 @@ const Appointments = () => {
                 </button>
               </div>
             </div>
-          ))}
+          )))}
         </div>
       </div>
     </div>
   );
-};
+}
 
 export default Appointments;

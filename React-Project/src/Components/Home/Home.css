@@ -6,15 +6,14 @@
 
 #first {
   display: flex;
-  justify-content: center;   /* center cards horizontally */
-  align-items: flex-start;   /* align cards at top */
-  flex-wrap: wrap;           /* wrap cards on smaller screens */
-  gap: 20px;                 /* spacing between cards */
+  justify-content: center;   
+  align-items: flex-start;   
+  flex-wrap: wrap;           
+  gap: 20px;                 
   padding: 20px;
-  background: #f9f9f9;       /* light background */
+  background: #f9f9f9;       
 }
 
-/* Card Styling */
 #first .card {
   width: 18rem;
   border: none;
@@ -43,7 +42,7 @@
   }
 
   #first .card {
-    width: 100%; /* cards take full width on small screens */
+    width: 100%; 
     max-width: 350px;
   }
 }
@@ -64,22 +63,18 @@
 }
 .second-b {
   display: flex;
-  flex-wrap: wrap;          /* makes cards wrap on smaller screens */
-  gap: 20px;                /* spacing between cards */
+  flex-wrap: wrap;          
+  gap: 20px;                
   justify-content: space-between; 
-   /* center the cards in row */
    margin:5%;
 }
 
 .health-card {
-  flex: 1 1 250px;          /* responsive sizing */
+  flex: 1 1 250px;          
   max-width: 200px;
   background: #fff;
-  /* border: 1px solid #ddd; */
-  /* border-radius: 12px; */
   padding: 16px;
   text-align: center;
-  /* box-shadow: 0 4px 8px rgba(0,0,0,0.1); */
 }
 .health-card button{
     border:none;
@@ -97,24 +92,20 @@
 }
 #fourth {
   display: flex;
-  /* flex-wrap: wrap;          */
   margin: 5%;
   gap: 20px;
   justify-content: center;
-  /* align-items: center; */
-  /* align-content: center; */
 }
 
 .fourth-b {
   display: flex;
-  /* flex-wrap: wrap;         */
   gap: 5%;
-  flex: 1;                 /* allow it to shrink/grow */
+  flex: 1;                 
 }
 
 #fourth-a {
   flex-basis: 30%;
-  min-width: 250px;        /* ensures it doesn’t shrink too small */
+  min-width: 250px;        
 }
 
 #fourth-a > button {
@@ -127,15 +118,13 @@
   cursor: pointer;
 }
 
-/* 📱 Mobile & Tablet Responsiveness */
 @media (max-width: 768px) {
   #fourth {
-    flex-direction: column;   /* stack vertically */
+    flex-direction: column;   
     align-items: center;
   }
 
   .fourth-b {
-    /* flex-direction: column; */
     flex-wrap: nowrap;
     gap: 20px;
     width: 100%;
@@ -148,7 +137,7 @@
   }
 
   #fourth-a > button {
-    width: 80%;              /* button adjusts on smaller screens */
+    width: 80%;              
     max-width: 250px;
   }
 }
@@ -170,11 +159,9 @@
   margin:5%;
   margin-left: 15%;
   justify-content: center;
-  /* background: #f9f9f9; */
 }
 #sixth>div>img{
   margin-left: 35%;
-  /* flex-basis: 30%; */
 }
 #sixth-b,#sixth-c,#sixth-d{
   display: flex;
@@ -211,31 +198,39 @@
 @media (max-width:992px){
   #sixth{
     flex-direction: column;
-    /* gap:5%; */
     margin:5%;
+    justify-content: center;
   }
-  /* #sixth{
-    gap:15%;
-  }
-   */
+ 
   #sixth-a{
     margin:5%;
     margin-left: 30%;
-    /* text-align: center; */
 
   }
   #sixth-a>p{
     text-align:justify;
-    /* width: 100%; */
   }
 }
 
 @media (max-width:576px){
+  #sixth{
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-left:-7%;
+  }
+  
   #sixth-b{
     flex-direction: column;
+    margin-left: -7%;
   }
   #sixth-e{
     flex-direction: column;
+    margin:1%;
+  }
+  #sixth-e>button{
+    width:100%;
+    padding:1%;
   }
   #sixth-c,#sixth-d{
     justify-content: center;

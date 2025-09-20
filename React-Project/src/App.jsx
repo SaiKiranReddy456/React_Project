@@ -1,7 +1,7 @@
 import React from "react";
 import Signup from "./Components/Signup/Signup";
 import Login from "./Components/Login/Login";
-import { Route, Routes } from "react-router-dom";
+import { HashRouter,Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import AdminDashboard from "./Components/AdminDashboard/AdminDashboard";
 import UserDashboard from "./Components/UserDashboard/UserDashboard";
@@ -16,8 +16,16 @@ import AdminHome from "./Components/AdminDashboard/Sidebar/AdminHome/AdminHome";
 import Home from "./Components/Home/Home";
 import AboutUs from "./Components/AboutUs/AboutUs";
 import ContactUs from "./Components/ContactUs/ContactUs";
+import { useEffect } from "react";
+import AOS from "aos";
 
 const App = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, 
+      once: true,     
+    });
+  }, []);
   return (
     <div>
       <NavbarComp></NavbarComp>

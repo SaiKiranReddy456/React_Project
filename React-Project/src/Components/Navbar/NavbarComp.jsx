@@ -10,22 +10,6 @@ const NavbarComp = () => {
   const loggedInPerson =
     JSON.parse(localStorage.getItem("loggedInAdmin")) ||
     JSON.parse(localStorage.getItem("loggedInUser"));
-  const handleLoginSwitch = () => {
-    navigate("/login");
-  };
-  const handleSignupSwitch = () => {
-    navigate("/signup");
-  };
-
-  const handleHome = () => {
-    navigate("/home");
-  };
-  const handleAboutUs = () => {
-    navigate("/aboutus");
-  };
-  const handleContactUs = () => {
-    navigate("/contactus");
-  };
 
   const handleLogout = async () => {
     const auth = getAuth();
@@ -43,31 +27,36 @@ const NavbarComp = () => {
 
   return (
     <Navbar bg="light" expand="lg" className="custom-navbar">
-      <Container className="navbar-content">
-        <Navbar.Brand href="#home">HealthBridge</Navbar.Brand>
-        {loggedInPerson ? (
-          <>
-            <button className="logout" onClick={handleLogout}>
-              Logout
-            </button>
-          </>
-        ) : (
-          <>
-            <Nav className="nav-links">
-              <button onClick={handleHome}>HOME</button>
-              <button onClick={handleAboutUs}>ABOUT US</button>
-              <button onClick={handleContactUs}>CONTACT US</button>
+      <Container>
+        <Navbar.Brand onClick={() => navigate("/home")} style={{ cursor: "pointer" }}>
+          HealthBridge
+        </Navbar.Brand>
+
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          {loggedInPerson ? (
+            <Nav className="ms-auto">
+              <button className="btn btn-danger" onClick={handleLogout}>
+                Logout
+              </button>
             </Nav>
-            <div className="nav-buttons">
-              <button className="btn btn-primary" onClick={handleLoginSwitch}>
-                LOGIN
-              </button>
-              <button className="btn btn-primary" onClick={handleSignupSwitch}>
-                SIGN UP
-              </button>
-            </div>
-          </>
-        )}
+          ) : (
+            <Nav className="ms-auto align-items-lg-center">
+              <Nav.Link onClick={() => navigate("/home")}>Home</Nav.Link>
+              <Nav.Link onClick={() => navigate("/aboutus")}>About Us</Nav.Link>
+              <Nav.Link onClick={() => navigate("/contactus")}>Contact Us</Nav.Link>
+
+              <div className="d-flex gap-2 ms-lg-3 mt-2 mt-lg-0">
+                <button className="btn btn-outline-primary" onClick={() => navigate("/login")}>
+                  Login
+                </button>
+                <button className="btn btn-outline-primary" onClick={() => navigate("/signup")}>
+                  Sign Up
+                </button>
+              </div>
+            </Nav>
+          )}
+        </Navbar.Collapse>
       </Container>
     </Navbar>
   );

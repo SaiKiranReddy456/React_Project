@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { toast } from "react-toastify";
 import { authentication } from "../../ConfigFirebase/Config";
+import myImage from "./img2.jpeg"
 
 const Login = () => {
   const [loginDetails, setLoginDetails] = useState({
@@ -44,7 +45,7 @@ const Login = () => {
   return (
     <div id="main">
       <div className="branding">
-        <img src="img2.jpeg"></img>
+        <img src={myImage}></img>
         <h2>HealthBridge</h2>
         <h3>Connecting You to Better Care, Instantly.</h3>
       </div>
